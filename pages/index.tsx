@@ -4,7 +4,7 @@ import ArticleList from '../components/ArticleList'
 import { server } from '../config'
 
 export default function Home({ articles }: any) {
-  console.log(articles)
+  // console.log(articles)
   return (
     <div>
       <ArticleList articles={articles} />
@@ -13,8 +13,12 @@ export default function Home({ articles }: any) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/articles`)
-  const articles = await res.json()
+  const NEWS_KEY = process.env.NEWS_API_KEY;
+  const result = await fetch(`http://api.mediastack.com/v1/news?access_key=${NEWS_KEY}`);
+  const articles = await result.json();
+
+  // const res = await fetch(`${server}/api/articles`)
+  // const articles = await res.json()
 
   return {
     props: {

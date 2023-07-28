@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+.center {
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
 }

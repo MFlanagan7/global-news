@@ -6,7 +6,7 @@ import Meta from "../../../components/Meta"
 const article = ({ article }: any) => {
     // const router = useRouter()
     // const { id } = router.query
-    console.log(article)
+    // console.log(article)
   return (
     <>
         <Meta title={article.title} description={article.excerpt} />

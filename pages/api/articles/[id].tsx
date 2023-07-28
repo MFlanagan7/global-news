@@ -1,6 +1,7 @@
 import { articles } from '../../../data'
 
 export default function handler({query: { id }}: any, res: any) {
+    
     const filtered = articles.filter(article => article.id === id)
 
     if(filtered.length > 0) {
