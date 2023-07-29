@@ -4,7 +4,6 @@ import ArticleList from '../components/ArticleList'
 import { server } from '../config'
 
 export default function Home({ articles }: any) {
-  // console.log(articles)
   return (
     <div>
       <ArticleList articles={articles} />
@@ -17,23 +16,9 @@ export const getStaticProps = async () => {
   const result = await fetch(`http://api.mediastack.com/v1/news?access_key=${NEWS_KEY}`);
   const articles = await result.json();
 
-  // const res = await fetch(`${server}/api/articles`)
-  // const articles = await res.json()
-
   return {
     props: {
       articles
     }
   }
 }
-
-// export const getStaticProps = async () => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
-//   const articles = await res.json()
-
-//   return {
-//     props: {
-//       articles
-//     }
-//   }
-// }

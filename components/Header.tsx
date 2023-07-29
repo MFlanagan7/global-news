@@ -8,13 +8,6 @@ const Header = () => {
             <span>Global</span> News
         </h1>
         <p className={headerStyles.description}>Keep up to date with the latest news from around the globe.</p>
-        {/* <style jsx>
-            {`
-                .title {
-                    color: ${x > 3 ? 'red' : 'blue'};
-                }
-            `}
-        </style> */}
     </div>
   )
 }
