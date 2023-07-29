@@ -1,7 +1,4 @@
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import ArticleList from '../components/ArticleList'
-import { server } from '../config'
 
 export default function Home({ articles }: any) {
   return (
